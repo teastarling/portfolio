@@ -4,10 +4,11 @@ Website showcasing recent work with mobile-first design and flexible elements to
 
 ## Changes
 
-*Added informative text to readme
+*beginning to set flex box flow and positioning for page
 
-*Fixed issue with "hero" image not showing up and created flexible image with color gradient overlay as well as fixed subtitle text in the bottom corner.
+*beginning to position page elements according to example provided
 
+*laying groundwork for alterations as screen size drops below certain resolutions
 
 ## Image Credit
 *Hero image courtesy of David Bartus via [Pexels](https://pexels.com/)

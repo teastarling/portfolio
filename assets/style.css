@@ -4,7 +4,7 @@
     --aquadark: rgb(130, 194, 202);
 }
 
-/* site background, font, percentage parameters, and margins established */
+/* site background, font, percentage parameters, and margins established, anchoring the "flex" display and setting flex direction - overflow hidden trying to figure out how to extend h1 background to edge*/
 body {
     background-color:rgb(230, 234, 240);
     color: var(--slategray);
@@ -12,26 +12,76 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    /* overflow-x: hidden; */
+    display: flex;
+    flex-flow: column;
 }
-
+/* Color and spacing around header element */
 header {
     background-color: var(--slategray);
+    padding: 20px;
 }
-
-header li {
+/* situating navigation to the right side of header and setting it to "float" around with browser window size */
+header nav {
+    font-size: large;
+    margin-right: 80px;
+    float: right;
+}
+/* removing decoration from navigation and displaying horizontally in a way that allows height and width of the element to be changed */
+header nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+}
+/* removing default link decoration and colors and altering underline to create a false underline in order to match example style */
+header nav li a {
     color: var(--aquadark);
+    text-decoration: none;
+    border-bottom: 2px solid;
 }
-
+/* styling and setting up flexible position and horizontal display-style to align with navigation */
 h1 {
     background-color: var(--aquadark);
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
 }
+/* article element to be styled */
+article {
+   
+}
+/* aligning h3 header to left to try and bring paragraph and header side-by-side */
+article h3 {
+    float: left;
+    margin: 2% 8%;
+    width: 50%;
+}
+/* aligning "about me" content to left side of page beside h3 header */
+article p {
+    float: right;
+    margin: 0;
+    width: 75%;
+}
+
+/* attempting to figure out how to extend header background to edge */
+/* h1:before {
+    content: "";
+    background-color: var(--aquadark);
+    position: absolute;
+    height: 100%;
+    margin
+    z-index: -1; 
+} */
 
 h2 {
     background-color: var(--aquadark);
 }
-
+/* font size for content headings */
 h3 {
+    font-size: xx-large;
 }
+
+
 /* Flexible main banner image of site with opaque color gradient */
 .hero-image { 
     background-image: linear-gradient(to bottom, rgba(56, 143, 243, 0.5), rgba(0, 50, 97, 0.500)), url("../assets/images/pexels-david-bartus-963278.jpeg");
@@ -51,4 +101,11 @@ h3 {
     letter-spacing: 2px;
     font-stretch: ultra-condensed;
 }
+/* wip to alter based on screen size for ease of user navigation */
+/* @media (max-width: px) {
 
+}
+
+@media (max-width: px) {
+
+} */
