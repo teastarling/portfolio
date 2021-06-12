@@ -4,11 +4,14 @@
     --aquadark: rgb(130, 194, 202);
 }
 
-
+/* site background, font, percentage parameters, and margins established */
 body {
     background-color:rgb(230, 234, 240);
     color: var(--slategray);
-    font-family:Arial, Helvetica, sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 header {
@@ -29,20 +32,23 @@ h2 {
 
 h3 {
 }
-/* FIX */
-/* .hero-image { 
-    background-image: url("../assets/highfivehero.jpg");
-    height: 50%;
+/* Flexible main banner image of site with opaque color gradient */
+.hero-image { 
+    background-image: linear-gradient(to bottom, rgba(56, 143, 243, 0.5), rgba(0, 50, 97, 0.500)), url("../assets/images/pexels-david-bartus-963278.jpeg");
+    height: 25%;
     width: 100%;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
-} */
-
+}
+/* Text overlay on header/hero image that remains positioned relative to banner size */
 .hero-text {
     position: absolute;
-    bottom: 8px;
-    right: 16px;
+    bottom: 20px;
+    right: 75px;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    font-stretch: ultra-condensed;
 }
 
