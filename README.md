@@ -4,11 +4,9 @@ Website showcasing recent work with mobile-first design and flexible elements to
 
 ## Changes
 
-*beginning to set flex box flow and positioning for page
+#attempting to change to a "grid" set-up instead of arranging sections within flexboxes.
 
-*beginning to position page elements according to example provided
-
-*laying groundwork for alterations as screen size drops below certain resolutions
+#switched around some classes and id's in order to streamline
 
 ## Image Credit
 *Hero image courtesy of David Bartus via [Pexels](https://pexels.com/)

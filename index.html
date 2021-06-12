@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
     <title>Tyler Starling</title>
@@ -28,22 +26,35 @@
                     </li>
                 </ul>
     </header>
+
     <!-- Hero image and text for sub-header with subtitle-->
-    <div class="hero-image">
-        <div class="hero-text">
+    <div class="hero">
+        <div>
             <h2> Welcome! </h2>
         </div>
     </div>
+
+<!-- Start of the grid area -->
+    <main class="grid-container">
+    <!-- left-hand table of grid container -->
+    <aside>
+        <h3>About Me</h3>
+        <div class= "line"></div>
+        <h3>Work</h3>
+        <div class= "line"></div>
+        <h3>Contact</h3>
+        <div class= "line"></div>
+    </aside>
+
     <!-- Content with details about me -->
     <article id="aboutme">
-        <h3>About Me</h3>
             <p>content content content content contentcontent content content content contentcontent content content content contentcontent content content content contentcontent content content content content</p>
             <br>
             <p>content content content content contentcontent content content content contentcontent content content content content</p>
     </article>
+
     <!-- Images and links to projects -->
-    <main id="work">
-        <h3>Work</h3>
+    <section id="work">
             <div class="big-container">
                 <img src="#" alt="project1">
                 <div class="bottom-left">Project Name 1</div>
@@ -64,10 +75,10 @@
                 <img src="#" alt="project5">
                 <div class="bottom-left">Project Name 5</div>
             </div>
-    </main>
+    </section>
+    
     <!-- Footer with list of contact information -->
     <footer id="contact">
-        <h3>Contact Me</h3>
             <ul class="contact-info">
                 <li>Phone</li>
                 <li>Email</li>
@@ -75,6 +86,8 @@
                 <li>Linkedin</li>
             </ul>
     </footer>
+</main>
+<!-- End of the grid area -->
     
 </body>
 </html>
