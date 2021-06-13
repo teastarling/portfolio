@@ -4,6 +4,7 @@
     --aquadark: rgb(130, 194, 202);
 }
 
+
 /* site background, font, percentage parameters, and margins established - overflow hidden trying to figure out how to extend h1 background to edge*/
 body {
     background-color:rgb(230, 234, 240);
@@ -12,7 +13,6 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    /* overflow-x: hidden; */
 }
 /* Color and spacing around header element */
 header {
@@ -44,16 +44,16 @@ h1 {
     display: inline-block;
     position: relative;
 }
-
-/* attempting to figure out how to extend header background to edge */
-/* h1:before {
-    content: "";
+/*still trying to extend background*/
+ /* h1:before {
+    content:"";
     background-color: var(--aquadark);
     position: absolute;
     height: 100%;
-    margin
-    z-index: -1; 
-} */
+    width: 200vw;
+    left: -100vw;
+    z-index: -1;
+ } */
 
 /* styling and situating for subheader */
 h2 {
@@ -70,21 +70,14 @@ h2 {
 h3 {
     font-size: 40px;
     text-align: right;
-    padding: 2%;
+    margin: 5%;
+    width: 75%;
+    border-right: 4px solid;
+    color: var(--slategray)
 }
 
-/* assigning roles for grid container */
-aside {grid-area: menu;}
-article {grid-area: about;}
-section {grid-area: work;}
-footer {grid-area: footer;}
-
-/* setting spaces within grid container */
-.grid-container {
-    display: grid;
-    grid-template-areas:'menu about about about about about' 'menu work work work work work' 'menu footer footer footer footer footer';
-    grid-gap: 2px;
-    padding: 5px;
+p {
+    margin: 5% 5% 5% 1%;
 }
 
 /* Flexible main banner image of site with opaque color gradient */
@@ -97,6 +90,29 @@ footer {grid-area: footer;}
     background-repeat: no-repeat;
     position: relative;
 }
+
+/* assigning roles for grid container */
+.aboutheader {grid-area: aboutheader;}
+.aboutcontent {grid-area: aboutcontent;}
+.workheader {grid-area: workheader;}
+.workcontent {grid-area: workcontent;}
+.contactheader{grid-area: contactheader;}
+.contactinfo{grid-area: contactinfo}
+
+/* setting spaces within grid container */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "aboutheader aboutcontent aboutcontent aboutcontent" 
+    "workheader  workcontent workcontent workcontent" 
+    "contactheader contactinfo contactinfo contactinfo";
+    grid-gap: 5px;
+    padding: 5px;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+
 /* wip attempting to create lines next to menu elements */
 /* .line {
     border-left: var(--slategray);

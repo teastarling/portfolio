@@ -4,9 +4,9 @@ Website showcasing recent work with mobile-first design and flexible elements to
 
 ## Changes
 
-#attempting to change to a "grid" set-up instead of arranging sections within flexboxes.
+#grid completed with some structural html changes
 
-#switched around some classes and id's in order to streamline
+#made some minor changes to spacing in html to correct appearance issues
 
 ## Image Credit
 *Hero image courtesy of David Bartus via [Pexels](https://pexels.com/)
