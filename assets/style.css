@@ -1,11 +1,11 @@
-/* setting vars */
+/* setting vars for reused colors*/
 :root {
     --slategray: rgb(34, 45, 54);
     --aquadark: rgb(130, 194, 202);
 }
 
 
-/* site background, font, percentage parameters, and margins established - overflow hidden trying to figure out how to extend h1 background to edge*/
+/* site background, font, site percentage parameters, and margins established */
 body {
     background-color:rgb(230, 234, 240);
     color: var(--slategray);
@@ -17,9 +17,9 @@ body {
 /* Color and spacing around header element */
 header {
     background-color: var(--slategray);
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
 }
-/* situating navigation to the right side of header and setting it to "float" around with browser window size */
+/* situating navigation to the right side of header */
 header nav {
     font-size: large;
     margin-right: 80px;
@@ -44,18 +44,8 @@ h1 {
     display: inline-block;
     position: relative;
 }
-/*still trying to extend background*/
- /* h1:before {
-    content:"";
-    background-color: var(--aquadark);
-    position: absolute;
-    height: 100%;
-    width: 200vw;
-    left: -100vw;
-    z-index: -1;
- } */
 
-/* styling and situating for subheader */
+/* styling and situating for subheader on "hero" image*/
 h2 {
     background-color: var(--aquadark);
     position: absolute;
@@ -76,13 +66,32 @@ h3 {
     color: var(--slategray)
 }
 
+/* Arranging spacing for "about me" text */
 p {
-    margin: 5% 5% 5% 1%;
+    margin: 2% 5% 5% 1%;
+}
+
+/* Lining up the footer link list */
+footer li {
+    padding: 30px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+/* removing decoration from links in footer */
+footer a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* assigning the links in the footer to stay the same text as the rest of the page after being clicked */
+footer a:visited {
+    color: inherit;
 }
 
 /* Flexible main banner image of site with opaque color gradient */
 .hero { 
-    background-image: linear-gradient(to bottom, rgba(56, 143, 243, 0.5), rgba(0, 50, 97, 0.500)), url("../assets/images/pexels-david-bartus-963278.jpeg");
+    background-image: linear-gradient(to bottom, rgba(56, 143, 243, 0.5), rgba(0, 50, 97, 0.500)), url("./images/pexels-david-bartus-963278.jpeg");
     height: 25%;
     width: 100%;
     background-position: center;
@@ -103,26 +112,122 @@ p {
 .grid-container {
     display: grid;
     grid-template-areas:
-    "aboutheader aboutcontent aboutcontent aboutcontent" 
-    "workheader  workcontent workcontent workcontent" 
-    "contactheader contactinfo contactinfo contactinfo";
+    "aboutheader aboutcontent" 
+    "workheader  workcontent" 
+    "contactheader contactinfo";
     grid-gap: 5px;
-    padding: 5px;
     grid-template-columns: 1fr 4fr;
 }
 
-
-
-/* wip attempting to create lines next to menu elements */
-/* .line {
-    border-left: var(--slategray);
-    height: 500px;
-} */
-/* wip to alter based on screen size for ease of user navigation */
-/* @media (max-width: px) {
-
+/* Situating "about" content so image and text are next to one another */
+.aboutcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: px) {
+/* assigning roles to project grid container */
+.proj1 {grid-area: proj1}
+.proj2 {grid-area: proj2}
+.proj3 {grid-area: proj3}
+.proj4 {grid-area: proj4}
+.proj5 {grid-area: proj5}
 
-} */
+/* setting up spacing within project grid container */
+.workcontent {
+    display: grid;
+    grid-template-areas: 
+    "proj1 proj1"
+    "proj2 proj3"
+    "proj4 proj5";
+    grid-gap: 5px;
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(2, 40vw);
+    margin-left: 1px;
+}
+
+/* keeping images within their grid boxes and setting opacity and transition speed */
+.workcontent img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+/* setting to display without opacity on hover */
+.workcontent img:hover {
+    opacity: 1;
+}
+
+/* anchoring text in "bottom-left" class to images */
+.proj1, .proj2, .proj3, .proj4, .proj5 {
+    position: relative;
+    font-size: 20px;
+}
+
+/* situating text over project images */
+.bottom-left {
+    background-color: var(--aquadark);
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+}
+
+/* sizing image of me in "about me" section */
+#selfie {
+    width: 200px;
+    height: auto;
+    border-radius: 75px;
+    margin-top: 5px;
+}
+
+/* altering spacing and arrangement for main site to fit smaller screens with everything mostly in columns and some of the margins altered to sit better within smaller screens*/
+@media (max-width: 600px) {
+header {
+    padding: 0 0 30px 0;
+    margin: 10px;
+    text-align: center;
+}
+
+footer li{
+    text-align: center;
+    padding: 0 0 0 10%;
+    display: inline-block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    "aboutheader"
+    "aboutcontent" 
+    "workheader"
+    "workcontent" 
+    "contactheader" 
+    "contactinfo";
+}
+
+.aboutcontent {
+    text-align: center;
+    margin: 0 0 0 10%;
+}
+
+.aboutcontent  img{
+    display: none;
+}
+
+.workcontent {
+    grid-template-areas: 
+    "proj1"
+    "proj2"
+    "proj3"
+    "proj4"
+    "proj5";
+    margin: 0 0 0 40%;
+}
+
+.hero {
+    display: none;
+}
+
+}
